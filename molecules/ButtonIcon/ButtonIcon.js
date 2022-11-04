@@ -5,8 +5,9 @@ import propTypes from 'prop-types'
 
 const ButtonIcon = ({ type, children, icon }) => (
   <Button type={type} isBlock={false}>
-    <span style={{ marginRight: 5 }}>{children}</span> {/* FIXME: Add vertical spacer component */}
-    <Icon type='rightArrow' />
+    <span style={{ marginRight: 5 }}>{children}</span>{' '}
+    {/* FIXME: Add vertical spacer component */}
+    <Icon type={icon} />
   </Button>
 )
 
@@ -14,11 +15,12 @@ const ButtonIcon = ({ type, children, icon }) => (
 ButtonIcon.propTypes = {
   children: propTypes.node.isRequired,
   icon: propTypes.string.isRequired,
-  type: propTypes.oneOf(['primary', 'secondary', 'tertiary'])
+  type: propTypes.oneOf(['primary', 'secondary', 'tertiary']),
 }
 
 ButtonIcon.defaultProps = {
-  type: 'secondary'
+  type: 'secondary',
+  icon: 'rightArrow',
 }
 
 export default ButtonIcon

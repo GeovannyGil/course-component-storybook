@@ -3,7 +3,7 @@ import ButtonIcon from '../../molecules/ButtonIcon'
 
 export default {
   title: 'Molecules/ButtonIcon',
-  component: ButtonIcon
+  component: ButtonIcon,
 }
 
-export const Default = () => <ButtonIcon icon='right-arrow'>Click me</ButtonIcon>
+export const Default = () => <ButtonIcon icon="rightArrow">Click me</ButtonIcon>
